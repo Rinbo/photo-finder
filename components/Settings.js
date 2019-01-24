@@ -17,7 +17,11 @@ export class Settings extends Component {
           backgroundColor: this.props.theme.background
         }}
       >
-        <Text style={{ fontSize: 20, marginTop: 30 }}>Choose theme</Text>
+        <Text
+          style={{ fontSize: 20, marginTop: 30, color: this.props.theme.text }}
+        >
+          Choose theme
+        </Text>
         <View
           style={{
             flex: 1,

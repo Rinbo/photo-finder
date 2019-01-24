@@ -7,14 +7,12 @@ import reducers from "./reducers";
 import Router from "./Router";
 import NavBar from "./components/NavBar";
 
-
-
 export default class App extends React.Component {
   render() {
     const store = createStore(reducers, applyMiddleware(ReduxThunk));
     return (
       <Provider store={store}>
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1}}>
           <Router />
           <NavBar />
         </View>
