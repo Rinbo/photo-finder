@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { Scene, Router } from "react-native-router-flux";
 import PhotoSearch from "./components/PhotoSearch";
 import Settings from "./components/Settings";
@@ -7,13 +7,15 @@ import About from "./components/About";
 
 const RouterComponent = () => {
   return (
-    <Router>
-      <Scene key="root" style={styles.container}>
-        <Scene key="photos" component={PhotoSearch} parentIndex={1} initial />
-        <Scene key="settings" component={Settings} title="Settings" />
-        <Scene key="about" component={About} title="About" />
-      </Scene>
-    </Router>
+    <View style={{flex: 12}}>
+      <Router>
+        <Scene key="root" style={styles.container}>
+          <Scene key="photos" component={PhotoSearch} parentIndex={1} initial />
+          <Scene key="settings" component={Settings} />
+          <Scene key="about" component={About} />
+        </Scene>
+      </Router>
+    </View>
   );
 };
 

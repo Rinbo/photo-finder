@@ -15,28 +15,25 @@ export class NavBar extends Component {
       >
         <Button
           buttonStyle={{ marginTop: 20 }}
-          rightIcon={{ name: "pets" }}
+          onPress={Actions.photos}
           title="Photos"
-          onPress={() => {
-            Actions.photos();
-          }}
-        />
+        >
+          Photos
+        </Button>
         <Button
           buttonStyle={{ marginTop: 20 }}
-          rightIcon={{ name: "pets" }}
+          onPress={Actions.settings}
           title="Settings"
-          onPress={() => {
-            Actions.settings();
-          }}
-        />
+        >
+          Settings
+        </Button>
         <Button
           buttonStyle={{ marginTop: 20 }}
-          rightIcon={{ name: "pets" }}
           title="About"
-          onPress={() => {
-            Actions.about();
-          }}
-        />
+          onPress={Actions.about}
+        >
+          About
+        </Button>
       </View>
     );
   }

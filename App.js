@@ -5,6 +5,7 @@ import { createStore, applyMiddleware } from "redux";
 import ReduxThunk from "redux-thunk";
 import reducers from "./reducers";
 import Router from "./Router";
+import NavBar from "./components/NavBar";
 
 
 
@@ -15,6 +16,7 @@ export default class App extends React.Component {
       <Provider store={store}>
         <View style={{ flex: 1 }}>
           <Router />
+          <NavBar />
         </View>
       </Provider>
     );
