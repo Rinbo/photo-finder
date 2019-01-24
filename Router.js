@@ -10,9 +10,9 @@ const RouterComponent = () => {
     <View style={{flex: 12}}>
       <Router>
         <Scene key="root" style={styles.container}>
-          <Scene key="photos" component={PhotoSearch} parentIndex={1} initial />
-          <Scene key="settings" component={Settings} />
-          <Scene key="about" component={About} />
+          <Scene key="photos" component={PhotoSearch} parentIndex={1} initial title="Photos" />
+          <Scene key="settings" component={Settings} title="Settings"/>
+          <Scene key="about" component={About} title="About" />
         </Scene>
       </Router>
     </View>

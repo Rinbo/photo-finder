@@ -10,30 +10,12 @@ export class NavBar extends Component {
           flex: 1,
           flexDirection: "row",
           justifyContent: "space-around",
-          alignItems: "flex-end"
+          alignItems: "center"
         }}
       >
-        <Button
-          buttonStyle={{ marginTop: 20 }}
-          onPress={Actions.photos}
-          title="Photos"
-        >
-          Photos
-        </Button>
-        <Button
-          buttonStyle={{ marginTop: 20 }}
-          onPress={Actions.settings}
-          title="Settings"
-        >
-          Settings
-        </Button>
-        <Button
-          buttonStyle={{ marginTop: 20 }}
-          title="About"
-          onPress={Actions.about}
-        >
-          About
-        </Button>
+        <Button onPress={Actions.photos} title="Photos" />
+        <Button onPress={Actions.settings} title="Settings" />
+        <Button title="About" onPress={Actions.about} />
       </View>
     );
   }

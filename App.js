@@ -11,7 +11,7 @@ import NavBar from "./components/NavBar";
 
 export default class App extends React.Component {
   render() {
-    const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
+    const store = createStore(reducers, applyMiddleware(ReduxThunk));
     return (
       <Provider store={store}>
         <View style={{ flex: 1 }}>
