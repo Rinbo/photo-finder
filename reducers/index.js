@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-
+import photoReducer from "./photoReducer";
 export default combineReducers({
-  mockReducer: null
+  photos: photoReducer
 });

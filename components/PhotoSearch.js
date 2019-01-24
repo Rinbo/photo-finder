@@ -1,15 +1,13 @@
-import React, { Component } from 'react'
-import { View } from "react-native";
+import React from "react";
+import { View, Text } from "react-native";
+import NavBar from "./NavBar";
 
+export const PhotoSearch = () => {
+  return (
+    <View>
+      <Text>Seach</Text>
+    </View>
+  );
+};
 
-export class PhotoSearch extends Component {
-  render() {
-    return (
-      <View>
-        Seach
-      </View>
-    )
-  }
-}
-
-export default PhotoSearch
+export default PhotoSearch;

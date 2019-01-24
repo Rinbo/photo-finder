@@ -1,21 +1,21 @@
-import React from 'react'
-import { View } from "react-native";
-import { NativeRouter, Route, Switch, StyleSheet } from "react-router-native";
+import React from "react";
+import { StyleSheet } from "react-native";
+import { Scene, Router } from "react-native-router-flux";
+import PhotoSearch from "./components/PhotoSearch";
+import Settings from "./components/Settings";
+import About from "./components/About";
 
-export const Router = () =>{
+const RouterComponent = () => {
   return (
-    <NativeRouter>
-       <View style={styles.container}>
-       <Switch>
-          <Route path="/photos" component={PhotoSearch} />
-          <Route path="/settings" component={Settings} />
-          <Route path="/about" component={About} />
-        </Switch>      
-       </View>  
-    </NativeRouter>
-
-  )
-}
+    <Router>
+      <Scene key="root" style={styles.container}>
+        <Scene key="photos" component={PhotoSearch} parentIndex={1} initial />
+        <Scene key="settings" component={Settings} title="Settings" />
+        <Scene key="about" component={About} title="About" />
+      </Scene>
+    </Router>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -26,3 +26,5 @@ const styles = StyleSheet.create({
     fontSize: 20
   }
 });
+
+export default RouterComponent;

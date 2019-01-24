@@ -6,7 +6,7 @@ export class About extends Component {
   render() {
     return (
       <View>
-        About
+        <Text>About</Text>
       </View>
     )
   }

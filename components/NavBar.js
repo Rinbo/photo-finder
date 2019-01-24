@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Link } from "react-router-native";
-import { View } from "react-native";
+import { View, Button } from "react-native";
+import { Actions } from "react-native-router-flux";
 
 export class NavBar extends Component {
   render() {
@@ -9,12 +9,34 @@ export class NavBar extends Component {
         style={{
           flex: 1,
           flexDirection: "row",
-          justifyContent: "space-around"
+          justifyContent: "space-around",
+          alignItems: "flex-end"
         }}
       >
-        <Link to="/photos">Photos</Link>
-        <Link to="/settings">Settings</Link>
-        <Link to="/about">About</Link>
+        <Button
+          buttonStyle={{ marginTop: 20 }}
+          rightIcon={{ name: "pets" }}
+          title="Photos"
+          onPress={() => {
+            Actions.photos();
+          }}
+        />
+        <Button
+          buttonStyle={{ marginTop: 20 }}
+          rightIcon={{ name: "pets" }}
+          title="Settings"
+          onPress={() => {
+            Actions.settings();
+          }}
+        />
+        <Button
+          buttonStyle={{ marginTop: 20 }}
+          rightIcon={{ name: "pets" }}
+          title="About"
+          onPress={() => {
+            Actions.about();
+          }}
+        />
       </View>
     );
   }

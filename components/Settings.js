@@ -6,7 +6,7 @@ export class Settings extends Component {
   render() {
     return (
       <View>
-        Settings
+        <Text>Settings</Text>
       </View>
     )
   }
