@@ -40,7 +40,7 @@ export class PhotoSearch extends React.Component {
               onChangeText={searchString => {
                 this.setState({ searchString });
               }}
-              placeholder="Search"
+              placeholder="Search term"
               keyboardType="web-search"
               onSubmitEditing={() => this.onSearch()}
               ref="searchBar"

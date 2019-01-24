@@ -18,15 +18,13 @@ const RouterComponent = () => {
             parentIndex={1}
             initial
             title="Photos"
-            icon={TabIcon}
           />
           <Scene
             key="settings"
             component={Settings}
             title="Settings"
-            icon={TabIcon}
           />
-          <Scene key="about" component={About} title="About" icon={TabIcon}  />
+          <Scene key="about" component={About} title="About"  />
         </Scene>
       </Router>
     </View>
